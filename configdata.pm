@@ -34,7 +34,7 @@ our %config = (
   bn_ll => "1",
   build_file => "Makefile",
   build_file_templates => [ "Configurations/common0.tmpl", "Configurations/unix-Makefile.tmpl", "Configurations/common.tmpl" ],
-  build_infos => [ "./build.info", "crypto/build.info", "ssl/build.info", "engines/build.info", "apps/build.info", "test/build.info", "util/build.info", "tools/build.info", "fuzz/build.info", "crypto/objects/build.info", "crypto/md4/build.info", "crypto/md5/build.info", "crypto/sha/build.info", "crypto/mdc2/build.info", "crypto/hmac/build.info", "crypto/ripemd/build.info", "crypto/whrlpool/build.info", "crypto/poly1305/build.info", "crypto/blake2/build.info", "crypto/siphash/build.info", "crypto/sm3/build.info", "crypto/des/build.info", "crypto/aes/build.info", "crypto/rc2/build.info", "crypto/rc4/build.info", "crypto/aria/build.info", "crypto/bf/build.info", "crypto/cast/build.info", "crypto/camellia/build.info", "crypto/seed/build.info", "crypto/sm4/build.info", "crypto/chacha/build.info", "crypto/modes/build.info", "crypto/bn/build.info", "crypto/ec/build.info", "crypto/rsa/build.info", "crypto/dsa/build.info", "crypto/dh/build.info", "crypto/sm2/build.info", "crypto/dso/build.info", "crypto/engine/build.info", "crypto/buffer/build.info", "crypto/bio/build.info", "crypto/stack/build.info", "crypto/lhash/build.info", "crypto/rand/build.info", "crypto/err/build.info", "crypto/evp/build.info", "crypto/asn1/build.info", "crypto/pem/build.info", "crypto/x509/build.info", "crypto/x509v3/build.info", "crypto/conf/build.info", "crypto/txt_db/build.info", "crypto/pkcs7/build.info", "crypto/pkcs12/build.info", "crypto/comp/build.info", "crypto/ocsp/build.info", "crypto/ui/build.info", "crypto/cms/build.info", "crypto/ts/build.info", "crypto/srp/build.info", "crypto/cmac/build.info", "crypto/ct/build.info", "crypto/async/build.info", "crypto/kdf/build.info", "crypto/store/build.info", "test/ossl_shim/build.info" ],
+  build_infos => [ "./build.info", "crypto/build.info", "ssl/build.info", "engines/build.info", "apps/build.info", "test/build.info", "util/build.info", "tools/build.info", "fuzz/build.info", "crypto/objects/build.info", "crypto/md4/build.info", "crypto/md5/build.info", "crypto/sha/build.info", "crypto/mdc2/build.info", "crypto/hmac/build.info", "crypto/ripemd/build.info", "crypto/whrlpool/build.info", "crypto/poly1305/build.info", "crypto/blake2/build.info", "crypto/siphash/build.info", "crypto/sm3/build.info", "crypto/des/build.info", "crypto/aes/build.info", "crypto/rc2/build.info", "crypto/rc4/build.info", "crypto/idea/build.info", "crypto/aria/build.info", "crypto/bf/build.info", "crypto/cast/build.info", "crypto/camellia/build.info", "crypto/seed/build.info", "crypto/sm4/build.info", "crypto/chacha/build.info", "crypto/modes/build.info", "crypto/bn/build.info", "crypto/ec/build.info", "crypto/rsa/build.info", "crypto/dsa/build.info", "crypto/dh/build.info", "crypto/sm2/build.info", "crypto/dso/build.info", "crypto/engine/build.info", "crypto/buffer/build.info", "crypto/bio/build.info", "crypto/stack/build.info", "crypto/lhash/build.info", "crypto/rand/build.info", "crypto/err/build.info", "crypto/evp/build.info", "crypto/asn1/build.info", "crypto/pem/build.info", "crypto/x509/build.info", "crypto/x509v3/build.info", "crypto/conf/build.info", "crypto/txt_db/build.info", "crypto/pkcs7/build.info", "crypto/pkcs12/build.info", "crypto/comp/build.info", "crypto/ocsp/build.info", "crypto/ui/build.info", "crypto/cms/build.info", "crypto/ts/build.info", "crypto/srp/build.info", "crypto/cmac/build.info", "crypto/ct/build.info", "crypto/async/build.info", "crypto/kdf/build.info", "crypto/store/build.info", "test/ossl_shim/build.info" ],
   build_type => "release",
   builddir => ".",
   cflags => [ "-Wa,--noexecstack" ],
@@ -54,17 +54,17 @@ our %config = (
   major => "1",
   makedepprog => "\$(CROSS_COMPILE)gcc",
   minor => "1.1",
-  openssl_algorithm_defines => [ "OPENSSL_NO_IDEA", "OPENSSL_NO_MD2", "OPENSSL_NO_RC5" ],
+  openssl_algorithm_defines => [ "OPENSSL_NO_MD2", "OPENSSL_NO_RC5" ],
   openssl_api_defines => [  ],
   openssl_other_defines => [ "OPENSSL_RAND_SEED_OS", "OPENSSL_NO_ASAN", "OPENSSL_NO_CRYPTO_MDEBUG", "OPENSSL_NO_CRYPTO_MDEBUG_BACKTRACE", "OPENSSL_NO_DEVCRYPTOENG", "OPENSSL_NO_EC_NISTP_64_GCC_128", "OPENSSL_NO_EGD", "OPENSSL_NO_EXTERNAL_TESTS", "OPENSSL_NO_FUZZ_AFL", "OPENSSL_NO_FUZZ_LIBFUZZER", "OPENSSL_NO_HEARTBEATS", "OPENSSL_NO_MSAN", "OPENSSL_NO_SCTP", "OPENSSL_NO_SSL_TRACE", "OPENSSL_NO_SSL3", "OPENSSL_NO_SSL3_METHOD", "OPENSSL_NO_UBSAN", "OPENSSL_NO_UNIT_TEST", "OPENSSL_NO_WEAK_SSL_CIPHERS", "OPENSSL_NO_STATIC_ENGINE", "OPENSSL_NO_AFALGENG" ],
   openssl_sys_defines => [  ],
   openssl_thread_defines => [ "OPENSSL_THREADS" ],
-  openssldir => "/etc/ssl",
-  options => "--cross-compile-prefix=arm-linux- --prefix=/opt/openssl-OpenSSL_1_1_1b/_INSTALL --openssldir=/etc/ssl --libdir=/opt/openssl-OpenSSL_1_1_1b/_INSTALL/lib enable-threads enable-shared enable-camellia enable-mdc2 enable-zlib-dynamic no-asan no-crypto-mdebug no-crypto-mdebug-backtrace no-devcryptoeng no-ec_nistp_64_gcc_128 no-egd no-external-tests no-fuzz-afl no-fuzz-libfuzzer no-heartbeats no-idea no-md2 no-msan no-rc5 no-sctp no-ssl-trace no-ssl3 no-ssl3-method no-ubsan no-unit-test no-weak-ssl-ciphers",
+  openssldir => "",
+  options => "--cross-compile-prefix=arm-linux- --prefix=/opt/openssl-OpenSSL_1_1_1b/_INSTALL --libdir=/opt/openssl-OpenSSL_1_1_1b/_INSTALL/lib enable-shared --release no-asan no-crypto-mdebug no-crypto-mdebug-backtrace no-devcryptoeng no-ec_nistp_64_gcc_128 no-egd no-external-tests no-fuzz-afl no-fuzz-libfuzzer no-heartbeats no-md2 no-msan no-rc5 no-sctp no-ssl-trace no-ssl3 no-ssl3-method no-ubsan no-unit-test no-weak-ssl-ciphers no-zlib no-zlib-dynamic",
   perl_archname => "i386-linux-thread-multi",
   perl_cmd => "/usr/bin/perl",
   perl_version => "5.10.0",
-  perlargv => [ "linux-armv4", "--cross-compile-prefix=arm-linux-", "--prefix=/opt/openssl-OpenSSL_1_1_1b/_INSTALL", "--openssldir=/etc/ssl", "--libdir=/opt/openssl-OpenSSL_1_1_1b/_INSTALL/lib", "threads", "shared", "no-idea", "no-rc5", "enable-camellia", "enable-mdc2", "zlib-dynamic" ],
+  perlargv => [ "linux-armv4", "--cross-compile-prefix=arm-linux-", "--prefix=/opt/openssl-OpenSSL_1_1_1b/_INSTALL", "--libdir=/opt/openssl-OpenSSL_1_1_1b/_INSTALL/lib", "shared", "--release" ],
   perlenv => {
       "AR" => undef,
       "ARFLAGS" => undef,
@@ -104,7 +104,7 @@ our %config = (
   prefix => "/opt/openssl-OpenSSL_1_1_1b/_INSTALL",
   processor => "",
   rc4_int => "unsigned char",
-  sdirs => [ "objects", "md4", "md5", "sha", "mdc2", "hmac", "ripemd", "whrlpool", "poly1305", "blake2", "siphash", "sm3", "des", "aes", "rc2", "rc4", "aria", "bf", "cast", "camellia", "seed", "sm4", "chacha", "modes", "bn", "ec", "rsa", "dsa", "dh", "sm2", "dso", "engine", "buffer", "bio", "stack", "lhash", "rand", "err", "evp", "asn1", "pem", "x509", "x509v3", "conf", "txt_db", "pkcs7", "pkcs12", "comp", "ocsp", "ui", "cms", "ts", "srp", "cmac", "ct", "async", "kdf", "store" ],
+  sdirs => [ "objects", "md4", "md5", "sha", "mdc2", "hmac", "ripemd", "whrlpool", "poly1305", "blake2", "siphash", "sm3", "des", "aes", "rc2", "rc4", "idea", "aria", "bf", "cast", "camellia", "seed", "sm4", "chacha", "modes", "bn", "ec", "rsa", "dsa", "dh", "sm2", "dso", "engine", "buffer", "bio", "stack", "lhash", "rand", "err", "evp", "asn1", "pem", "x509", "x509v3", "conf", "txt_db", "pkcs7", "pkcs12", "comp", "ocsp", "ui", "cms", "ts", "srp", "cmac", "ct", "async", "kdf", "store" ],
   shlib_major => "1",
   shlib_minor => "1",
   shlib_version_history => "",
@@ -150,7 +150,7 @@ our %target = (
   cpuid_asm_src => "armcap.c armv4cpuid.S",
   cpuid_obj => "armcap.o armv4cpuid.o",
   cxxflags => "-std=c++11 -pthread",
-  defines => [ "ZLIB", "ZLIB_SHARED" ],
+  defines => [  ],
   des_asm_src => "des_enc.c fcrypt_b.c",
   des_obj => "des_enc.o fcrypt_b.o",
   disable => [  ],
@@ -332,10 +332,9 @@ our %disabled = (
   "fuzz-afl" => "default",
   "fuzz-libfuzzer" => "default",
   "heartbeats" => "default",
-  "idea" => "option",
   "md2" => "default",
   "msan" => "default",
-  "rc5" => "option",
+  "rc5" => "default",
   "sctp" => "default",
   "ssl-trace" => "default",
   "ssl3" => "default",
@@ -343,6 +342,8 @@ our %disabled = (
   "ubsan" => "default",
   "unit-test" => "default",
   "weak-ssl-ciphers" => "default",
+  "zlib" => "default",
+  "zlib-dynamic" => "default",
 );
 
 our %withargs = (
@@ -958,6 +959,11 @@ our %unified_info = (
                     "libssl",
                 ],
             "test/buildtest_hmac" =>
+                [
+                    "libcrypto",
+                    "libssl",
+                ],
+            "test/buildtest_idea" =>
                 [
                     "libcrypto",
                     "libssl",
@@ -2454,6 +2460,24 @@ our %unified_info = (
                             "crypto/hmac/hm_ameth.o",
                             "crypto/hmac/hm_pmeth.o",
                             "crypto/hmac/hmac.o",
+                        ],
+                    "products" =>
+                        {
+                            "lib" =>
+                                [
+                                    "libcrypto",
+                                ],
+                        },
+                },
+            "crypto/idea" =>
+                {
+                    "deps" =>
+                        [
+                            "crypto/idea/i_cbc.o",
+                            "crypto/idea/i_cfb64.o",
+                            "crypto/idea/i_ecb.o",
+                            "crypto/idea/i_ofb64.o",
+                            "crypto/idea/i_skey.o",
                         ],
                     "products" =>
                         {
@@ -4353,6 +4377,11 @@ our %unified_info = (
                 [
                     "test/generate_buildtest.pl",
                     "hmac",
+                ],
+            "test/buildtest_idea.c" =>
+                [
+                    "test/generate_buildtest.pl",
+                    "idea",
                 ],
             "test/buildtest_kdf.c" =>
                 [
@@ -7313,6 +7342,36 @@ our %unified_info = (
                     "crypto/include",
                     "include",
                 ],
+            "crypto/idea/i_cbc.o" =>
+                [
+                    ".",
+                    "crypto/include",
+                    "include",
+                ],
+            "crypto/idea/i_cfb64.o" =>
+                [
+                    ".",
+                    "crypto/include",
+                    "include",
+                ],
+            "crypto/idea/i_ecb.o" =>
+                [
+                    ".",
+                    "crypto/include",
+                    "include",
+                ],
+            "crypto/idea/i_ofb64.o" =>
+                [
+                    ".",
+                    "crypto/include",
+                    "include",
+                ],
+            "crypto/idea/i_skey.o" =>
+                [
+                    ".",
+                    "crypto/include",
+                    "include",
+                ],
             "crypto/include/internal/bn_conf.h" =>
                 [
                     ".",
@@ -9411,6 +9470,10 @@ our %unified_info = (
                 [
                     "include",
                 ],
+            "test/buildtest_idea.o" =>
+                [
+                    "include",
+                ],
             "test/buildtest_kdf.o" =>
                 [
                     "include",
@@ -10138,6 +10201,7 @@ our %unified_info = (
             "test/buildtest_engine",
             "test/buildtest_evp",
             "test/buildtest_hmac",
+            "test/buildtest_idea",
             "test/buildtest_kdf",
             "test/buildtest_lhash",
             "test/buildtest_md4",
@@ -12170,6 +12234,26 @@ our %unified_info = (
                 [
                     "crypto/hmac/hmac.c",
                 ],
+            "crypto/idea/i_cbc.o" =>
+                [
+                    "crypto/idea/i_cbc.c",
+                ],
+            "crypto/idea/i_cfb64.o" =>
+                [
+                    "crypto/idea/i_cfb64.c",
+                ],
+            "crypto/idea/i_ecb.o" =>
+                [
+                    "crypto/idea/i_ecb.c",
+                ],
+            "crypto/idea/i_ofb64.o" =>
+                [
+                    "crypto/idea/i_ofb64.c",
+                ],
+            "crypto/idea/i_skey.o" =>
+                [
+                    "crypto/idea/i_skey.c",
+                ],
             "crypto/init.o" =>
                 [
                     "crypto/init.c",
@@ -13720,6 +13804,11 @@ our %unified_info = (
                     "crypto/hmac/hm_ameth.o",
                     "crypto/hmac/hm_pmeth.o",
                     "crypto/hmac/hmac.o",
+                    "crypto/idea/i_cbc.o",
+                    "crypto/idea/i_cfb64.o",
+                    "crypto/idea/i_ecb.o",
+                    "crypto/idea/i_ofb64.o",
+                    "crypto/idea/i_skey.o",
                     "crypto/init.o",
                     "crypto/kdf/hkdf.o",
                     "crypto/kdf/kdf_err.o",
@@ -14560,6 +14649,14 @@ our %unified_info = (
             "test/buildtest_hmac.o" =>
                 [
                     "test/buildtest_hmac.c",
+                ],
+            "test/buildtest_idea" =>
+                [
+                    "test/buildtest_idea.o",
+                ],
+            "test/buildtest_idea.o" =>
+                [
+                    "test/buildtest_idea.c",
                 ],
             "test/buildtest_kdf" =>
                 [
@@ -15791,10 +15888,6 @@ my %disabled_info = (
     },
     'heartbeats' => {
         macro => 'OPENSSL_NO_HEARTBEATS',
-    },
-    'idea' => {
-        macro => 'OPENSSL_NO_IDEA',
-        skipped => [ 'crypto/idea' ],
     },
     'md2' => {
         macro => 'OPENSSL_NO_MD2',
